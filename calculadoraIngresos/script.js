@@ -12,16 +12,19 @@ const datosGrafica = {
   backgroundColor: [],
 };
 
-agregarBtn.addEventListener('click', () => {
+agregarBtn.addEventListener('click', (e) => {
+
+  e.preventDefault();
+
   const ingreso = ingresoInput.value;
   const cantidad = parseInt(cantidadInput.value);
 
   if (ingreso && cantidad) {
     totalIngresos += cantidad;
-    resultado.innerText = `Total de ingresos: ${totalIngresos}`;
+    resultado.innerText = `Total: $${totalIngresos}`;
 
     const ingresoAgregado = document.createElement("p");
-    ingresoAgregado.innerText = `Ingreso: ${ingreso}, Cantidad: ${cantidad}`;
+    ingresoAgregado.innerText = `Ingreso: ${ingreso}, Cantidad: $${cantidad}`;
     ingresosAgregados.appendChild(ingresoAgregado);
 
     datosGrafica.labels.push(ingreso);
