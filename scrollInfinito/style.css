@@ -69,3 +69,34 @@ img{
 .card__data{
     margin: .3rem 0;
 }
+
+
+.back__page {
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    width: auto;
+    padding: .3rem 1rem;
+    border-radius: .3rem;
+    background-color: #004E89;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: .5rem;
+    transition: .2s ease-in-out;
+}
+
+.back__page:hover {
+    background-color: #1A659E;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .back__page {
+        font-size: .8rem;
+        top: 2rem;
+        left: 2rem;
+    }
+}
