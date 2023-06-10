@@ -4,16 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de ingresos</title>
   </head>
   <body>
-    <h1>Calculadora de Ingresos</h1>
-    <input type="text" id="ingresoInput" placeholder="Ingrese un ingreso">
-    <input type="number" id="cantidadInput" placeholder="Cantidad">
-    <button id="agregarBtn">Agregar ingreso</button>
-    <p id="resultado"></p>
-    <div id="ingresosAgregados"></div>
-    <canvas id="graficaPastel" width="400" height="400"></canvas>
+    <h1 class="title">Calculadora de Ingresos</h1>
+    <div class="containers">
+      <div class="container__data">
+        <form action="">
+          <label for="ingresoInput">Ingreso:</label>
+          <input type="text" id="ingresoInput" placeholder="renta" required>
+          <label for="cantidadInput">Cantidad:</label>
+          <input type="number" id="cantidadInput" placeholder="$0" required>
+          <button id="agregarBtn" type="submit">Agregar ingreso</button>
+        </form>
+        <div class="container__ingresos" id="ingresosAgregados"></div>
+      </div>
+      <div class="container__graphic">
+        <p class="resultado__ingresos" id="resultado"></p>
+        <canvas id="graficaPastel" width="400" height="400"></canvas>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
