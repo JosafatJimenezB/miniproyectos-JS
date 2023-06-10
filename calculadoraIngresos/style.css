@@ -20,17 +20,6 @@ body {
     flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-    .containers {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .container__graphic {
-        max-width: 600px;
-    }
-}
-
 .container__data {
     width: 100%;
     max-width: 400px;
@@ -95,7 +84,7 @@ button {
     width: 100%;
     height: 2rem;
     border: none;
-    border-radius: .5rem;
+    border-radius: .3rem;
     outline: none;
     background-color: #004E89;
     color: white;
@@ -129,4 +118,42 @@ p {
     border-radius: .2rem;
     font-weight: 400;
     font-size: 1rem;
+}
+
+.back__page {
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    width: auto;
+    padding: .3rem 1rem;
+    border-radius: .3rem;
+    background-color: #004E89;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: .5rem;
+    transition: .2s ease-in-out;
+}
+
+.back__page:hover {
+    background-color: #1A659E;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .containers {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .container__graphic {
+        max-width: 600px;
+    }
+
+    .back__page {
+        font-size: .8rem;
+        top: 2rem;
+        left: 2rem;
+    }
 }
