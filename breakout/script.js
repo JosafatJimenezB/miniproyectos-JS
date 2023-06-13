@@ -33,6 +33,8 @@ document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
 
 function keyDownHandler(e) {
+  e.preventDefault();
+
   if (e.code == "ArrowRight") {
     rightPressed = true;
   } else if (e.code == "ArrowLeft") {
@@ -40,6 +42,8 @@ function keyDownHandler(e) {
   }
 }
 function keyUpHandler(e) {
+  e.preventDefault();
+
   if (e.code == "ArrowRight") {
     rightPressed = false;
   } else if (e.code == "ArrowLeft") {
@@ -47,6 +51,8 @@ function keyUpHandler(e) {
   }
 }
 function mouseMoveHandler(e) {
+  e.preventDefault();
+
   const relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > 0 && relativeX < canvas.width) {
     paddleX = relativeX - paddleWidth / 2;
