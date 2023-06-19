@@ -4,12 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Convertidor audio a voz</title>
   </head>
-  <body>
-    <button id="btnStart">Iniciar Reconocimiento de voz</button>
-    <button id="btnStop">Detener Reconocimiento de voz</button>
-    <textarea id="result"></textarea>
+  <body class="bg-[#0E1D67] m-4">
+    <div class="w-full h-screen flex justify-center content-center flex-col">
+      <h1
+        class="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-400 text-3xl font-bold text-center md:text-6xl"
+      >
+        Voice recognition
+      </h1>
+      <div
+        class="buttons text-center my-16 flex content-center justify-center gap-x-4 flex-col md:flex-row"
+      >
+        <button class="bg-[#A5A2F2] py-1 px-3 my-1 rounded-md" id="btnStart">
+          Iniciar Reconocimiento de voz
+        </button>
+        <button class="bg-[#A5A2F2] py-1 px-3 my-1 rounded-md" id="btnStop">
+          Detener Reconocimiento de voz
+        </button>
+      </div>
+      <textarea
+        class="w-full rounded-md h-44 text-center shadow-xl mx-auto md:w-6/12"
+        id="result"
+        placeholder="listening..."
+      ></textarea>
+    </div>
 
     <script src="script.js"></script>
   </body>
