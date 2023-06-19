@@ -3,20 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="flipclock.css" />
     <title>Cuenta regresiva año nuevo</title>
   </head>
   <body>
-    <div class="clock"></div>
+    <h1 class="title animate__animated animate__lightSpeedInRight">Cuenta regresiva año nuevo</h1>
+    <div class="clock" id="clock">
+      <div class="clock__days number animate__animated animate__fadeInUpBig">
+        <span>00</span>
+        <h4>Dias</h4>
+      </div>
+      <div class="clock__hours number animate__animated animate__fadeInUpBig">
+        <span>00</span>
+        <h4>horas</h4>
+      </div>
+      <div class="clock__minutes number animate__animated animate__fadeInUpBig">
+        <span>00</span>
+        <h4>minutos</h4>
+      </div>
+      <div class="clock__seconds number animate__animated animate__fadeInUpBig">
+        <span>00</span>
+        <h4>segundos</h4>
+      </div>
+    </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="flipclock.js"></script>
+    <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50"/>
+      <source src="../assets/space.mp4" type="video/mp4" />
+    </video/>
     <script src="script.js"></script>
   </body>
 </html>
